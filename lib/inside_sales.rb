@@ -1,3 +1,5 @@
+require 'rest_client'
+
 module InsideSales
 
   REST_API_URL = 'https://#{@subdomain}.insidesales.com/do=noauth/rest/service'
