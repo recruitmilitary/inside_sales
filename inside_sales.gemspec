@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "inside_sales"
   s.version     = InsideSales::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Michael Guterl"]
+  s.email       = ["mguterl@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{InsideSales API}
+  s.description = %q{InsideSales API}
 
   s.rubyforge_project = "inside_sales"
 
