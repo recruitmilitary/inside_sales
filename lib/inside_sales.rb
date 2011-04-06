@@ -1,3 +1,4 @@
+require 'json'
 require 'rest_client'
 
 module InsideSales
