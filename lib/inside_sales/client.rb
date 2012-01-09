@@ -21,12 +21,8 @@ module InsideSales
     # method_missing because of the logic required to set the cookies.
     def login
       response = request(:login, [@username, @password, @token])
-      if response == "false"
-        raise AuthenticationError, "could not authenticate, please check your credentials"
-      else
-        @cookies = response.cookies
-        response
-      end
+      @cookies = response.cookies
+      response
     end
 
     # dynamically dispatch methods to the web service
