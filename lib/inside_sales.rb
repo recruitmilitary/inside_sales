@@ -31,7 +31,7 @@ module InsideSales
 
     # dynamically dispatch methods to the web service
     def method_missing(meth, *args, &block)
-      request(meth.to_s.camelize(:lower), [*args])
+      request(camelize(meth.to_s, false), [*args])
     end
 
     private
@@ -48,6 +48,15 @@ module InsideSales
       end
     rescue JSON::ParserError
       response
+    end
+
+    # Taken from ActiveSupport
+    def camelize(lower_case_and_underscored_word, first_letter_in_uppercase = true)
+      if first_letter_in_uppercase
+        lower_case_and_underscored_word.to_s.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:^|_)(.)/) { $1.upcase }
+      else
+        lower_case_and_underscored_word.to_s[0].chr.downcase + camelize(lower_case_and_underscored_word)[1..-1]
+      end
     end
 
   end
