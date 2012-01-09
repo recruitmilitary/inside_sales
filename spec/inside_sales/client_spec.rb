@@ -12,19 +12,38 @@ describe InsideSales::Client do
   }
 
   describe '#get_leads' do
-    use_vcr_cassette
 
-    it 'uses filters for returning the correct leads' do
-      email = 'michael@recruitmilitary.com'
-      filters = [{
-                   'field'    => 'email',
-                   'operator' => '=',
-                   'values'   => [email]
-                 }]
+    context 'with filters' do
+      use_vcr_cassette
 
-      leads = client.get_leads(filters)
-      leads.map { |lead| lead['email'] }.uniq.should == [email]
+      it 'uses filters for returning the correct leads' do
+        email = 'michael@recruitmilitary.com'
+        filters = [{
+                     'field'    => 'email',
+                     'operator' => '=',
+                     'values'   => [email]
+                   }]
+
+        leads = client.get_leads(filters)
+        leads.map { |lead| lead['email'] }.uniq.should == [email]
+      end
     end
+
+    context 'with an offset and limit' do
+      use_vcr_cassette
+
+      it 'can limit the number of leads returned' do
+        email = 'michael@recruitmilitary.com'
+        filters = [{
+                     'field'    => 'email',
+                     'operator' => '=',
+                     'values'   => [email]
+                   }]
+
+        client.get_leads(filters, 0, 1).size.should == 1
+      end
+    end
+
   end
 
 end

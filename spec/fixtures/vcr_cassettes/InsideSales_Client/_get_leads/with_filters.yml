@@ -23,7 +23,7 @@
       server: 
       - Apache
       date: 
-      - Mon, 09 Jan 2012 21:03:15 GMT
+      - Mon, 09 Jan 2012 21:27:16 GMT
       content-length: 
       - "30"
       content-encoding: 
@@ -32,7 +32,7 @@
       - InsideSales_db=crm_recruitmilitary; path=/
       - InsideSales_db_host=db1; path=/
       - InsideSales_selected_host_user=db1_1; path=/
-      - PHPSESSID=vpub2ort6876d11aiikbtgpi05; path=/
+      - PHPSESSID=u06oeg0ic4k4guldch705ihpg0; path=/
       cache-control: 
       - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
       vary: 
@@ -54,7 +54,7 @@
       accept-encoding: 
       - gzip, deflate
       cookie: 
-      - InsideSales_db=crm_recruitmilitary; InsideSales_db_host=db1; InsideSales_selected_host_user=db1_1; PHPSESSID=vpub2ort6876d11aiikbtgpi05
+      - InsideSales_db=crm_recruitmilitary; InsideSales_db_host=db1; InsideSales_selected_host_user=db1_1; PHPSESSID=u06oeg0ic4k4guldch705ihpg0
       content-length: 
       - "115"
   response: !ruby/struct:VCR::Response 
@@ -69,7 +69,7 @@
       server: 
       - Apache
       date: 
-      - Mon, 09 Jan 2012 21:03:15 GMT
+      - Mon, 09 Jan 2012 21:27:17 GMT
       content-length: 
       - "1128"
       content-encoding: 

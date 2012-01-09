@@ -1,0 +1,104 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://recruitmilitary.insidesales.com:443/do=noauth/rest/service
+    body: "{\"operation\":\"login\",\"parameters\":[\"admin\",\"blue-gibbon\",\"U3auIuUAuo7xRu6ffOLT3ScZkdugkwuF\"]}"
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "93"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - application/; charset=UTF-8
+      server: 
+      - Apache
+      date: 
+      - Mon, 09 Jan 2012 21:27:17 GMT
+      content-length: 
+      - "30"
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - InsideSales_db=crm_recruitmilitary; path=/
+      - InsideSales_db_host=db1; path=/
+      - InsideSales_selected_host_user=db1_1; path=/
+      - PHPSESSID=qcts05iusachfrfmiovt4ofhi2; path=/
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      vary: 
+      - Accept-Encoding
+      pragma: 
+      - no-cache
+    body: !binary |
+      H4sIAAAAAAAAAyopKk0FAAAA//8DAI1M/P0EAAAA
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://recruitmilitary.insidesales.com:443/do=noauth/rest/service
+    body: "{\"operation\":\"getLeads\",\"parameters\":[[{\"values\":[\"michael@recruitmilitary.com\"],\"operator\":\"=\",\"field\":\"email\"}],0,1]}"
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+      cookie: 
+      - InsideSales_db=crm_recruitmilitary; InsideSales_db_host=db1; InsideSales_selected_host_user=db1_1; PHPSESSID=qcts05iusachfrfmiovt4ofhi2
+      content-length: 
+      - "119"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - application/; charset=UTF-8
+      server: 
+      - Apache
+      date: 
+      - Mon, 09 Jan 2012 21:27:18 GMT
+      content-length: 
+      - "850"
+      content-encoding: 
+      - gzip
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      vary: 
+      - Accept-Encoding
+      pragma: 
+      - no-cache
+    body: !binary |
+      H4sIAAAAAAAAA3RUbW/bNhD+K4I+dUBcSLJlO/q0oNiGAi0GNC0KLAgIijzZ
+      XClSI6k06rD/viMpyVLiGoItP/fCu+ee48O/qeBpVd7us2K/u0nh2YFRVBKP
+      pulNqr8rMKS3+OWhwwvEptXD4XECG2GsI4q2gMGfqWwpP8GcRNKL8S/RdWDA
+      oJFTB4QZwB9/ZpHl+SbbbooyyfMqP1a7IzqNdlIPl1ryMbbVXDTiSnB5W+Ul
+      Bk8Or6JBQjjUmR7GZDP2k1yUMd0rF1Mcd1l5u7uAqm9r7CkQ5xslnYFGPKeV
+      6qW8SVf0fBTsTEH68gTnEiYcgSVRf/Q4EO9VC+POvsTo44ST/vWL+qaQXkS6
+      s1YeeVPm21+S/XG7KbMiC+3XAvNPdkQa+hxfzrpdGbQ7Iz0LAFoqJL62sdpf
+      DTDTC9cKKRw1w1um28mL6M4R3bu0aqi0yOd3qK2Y6qWcG7CWRLWVh61Xmwdz
+      tO+KIvmafNBPIKniyd0TjBFFDGbCDfg2OSBiXWTiTtKatnRCCK1rA0/e8AGx
+      H6Lz2ct853kIMzJDIA3r4sm9D7GJbpK7Foxg9OJ0SfTl/s4XY63AE3DGTCtH
+      GQpANTp0ky2tyxHHoV9si7G+NI2MRxg57agaJgV8ipR/HCnHYoTivQ2djHmU
+      6nFlsV5QPYSKnGDfcJJ2aGstR0EGcRLdEGg7qQcAXN40EhMPXA9s1HTYXXv2
+      TI7lUfQWJxXvg/0FwLj3qsagaUB9HHcMi0Doh/Ih2SRfqfHawUOxpgYrc0M3
+      c2B1bxgswwPwmg4cojZeLoY6oU6Te/y3iOdgmRGdEzoWXmTb/d7v7sJwJftv
+      m3e6RXEwSP40PNxX8xWp67+BucgW10RpFAeVctZ/gzfONVwiAcQyX/aKG4Ir
+      pk4+KGh7NFEJttGejHiLrhldUvRqYgtb0F6HFJ6p9Sxm+NmEZ7pvhPqnF2E7
+      VjbadVoo1wImtuBW5iTLqvAsNGTFD5jW4v79O1wXDi8LjCKL2Hr8y244WSlt
+      Rk9G990aWnACFHskoE5CXeNmPgTLY7hEuv1dgOSWHGZ5L1G88quHx5fg4Rp4
+      O893hRf5Fedie/W0Yncd3v8k9TG6//f4PwAAAP//AwB7Wi8lxgcAAA==
+
+    http_version: "1.1"
