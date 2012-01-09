@@ -1,0 +1,45 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://recruitmilitary.insidesales.com:443/do=noauth/rest/service
+    body: "{\"parameters\":[\"admin\",\"blue-gibbon\",\"U3auIuUAuo7xRu6ffOLT3ScZkdugkwuF\"],\"operation\":\"login\"}"
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "93"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - application/; charset=UTF-8
+      server: 
+      - Apache
+      date: 
+      - Mon, 09 Jan 2012 21:32:32 GMT
+      content-length: 
+      - "30"
+      content-encoding: 
+      - gzip
+      set-cookie: 
+      - InsideSales_db=crm_recruitmilitary; path=/
+      - InsideSales_db_host=db1; path=/
+      - InsideSales_selected_host_user=db1_1; path=/
+      - PHPSESSID=1t42ch9epmk9emj9bme8em59e7; path=/
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      vary: 
+      - Accept-Encoding
+      pragma: 
+      - no-cache
+    body: !binary |
+      H4sIAAAAAAAAAyopKk0FAAAA//8DAI1M/P0EAAAA
+
+    http_version: "1.1"

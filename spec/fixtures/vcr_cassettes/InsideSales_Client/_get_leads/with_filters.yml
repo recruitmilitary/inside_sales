@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://recruitmilitary.insidesales.com:443/do=noauth/rest/service
-    body: "{\"operation\":\"login\",\"parameters\":[\"admin\",\"blue-gibbon\",\"U3auIuUAuo7xRu6ffOLT3ScZkdugkwuF\"]}"
+    body: "{\"parameters\":[\"admin\",\"blue-gibbon\",\"U3auIuUAuo7xRu6ffOLT3ScZkdugkwuF\"],\"operation\":\"login\"}"
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -23,7 +23,7 @@
       server: 
       - Apache
       date: 
-      - Mon, 09 Jan 2012 21:27:16 GMT
+      - Mon, 09 Jan 2012 21:32:33 GMT
       content-length: 
       - "30"
       content-encoding: 
@@ -32,7 +32,7 @@
       - InsideSales_db=crm_recruitmilitary; path=/
       - InsideSales_db_host=db1; path=/
       - InsideSales_selected_host_user=db1_1; path=/
-      - PHPSESSID=u06oeg0ic4k4guldch705ihpg0; path=/
+      - PHPSESSID=259suq582pehdtgd50aiujv6j4; path=/
       cache-control: 
       - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
       vary: 
@@ -47,14 +47,14 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://recruitmilitary.insidesales.com:443/do=noauth/rest/service
-    body: "{\"operation\":\"getLeads\",\"parameters\":[[{\"values\":[\"michael@recruitmilitary.com\"],\"operator\":\"=\",\"field\":\"email\"}]]}"
+    body: "{\"parameters\":[[{\"values\":[\"michael@recruitmilitary.com\"],\"operator\":\"=\",\"field\":\"email\"}]],\"operation\":\"getLeads\"}"
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
       accept-encoding: 
       - gzip, deflate
       cookie: 
-      - InsideSales_db=crm_recruitmilitary; InsideSales_db_host=db1; InsideSales_selected_host_user=db1_1; PHPSESSID=u06oeg0ic4k4guldch705ihpg0
+      - InsideSales_db=crm_recruitmilitary; InsideSales_db_host=db1; InsideSales_selected_host_user=db1_1; PHPSESSID=259suq582pehdtgd50aiujv6j4
       content-length: 
       - "115"
   response: !ruby/struct:VCR::Response 
@@ -69,7 +69,7 @@
       server: 
       - Apache
       date: 
-      - Mon, 09 Jan 2012 21:27:17 GMT
+      - Mon, 09 Jan 2012 21:32:33 GMT
       content-length: 
       - "1128"
       content-encoding: 
