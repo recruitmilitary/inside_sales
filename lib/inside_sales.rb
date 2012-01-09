@@ -39,7 +39,11 @@ module InsideSales
     # Unfortunately the InsideSales API does not always return valid
     # JSON, so we have to work around it a bit.
     def request(operation, parameters)
-      response = RestClient.post(endpoint_url, { :operation => operation, :parameters => parameters }.to_json, { :cookies => @cookies })
+      response = RestClient.post(endpoint_url, {
+                                   :operation => operation,
+                                   :parameters => parameters
+                                 }.to_json,
+                                 { :cookies => @cookies })
       parsed   = JSON.parse response
       if parsed.is_a?(Hash) && parsed.has_key?("exception")
         raise Error, parsed["exception"]["string"]
