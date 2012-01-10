@@ -5,16 +5,12 @@ module InsideSales
 
   class Client
 
-    REST_API_URL = 'https://#{@subdomain}.insidesales.com/do=noauth/rest/service'
-
     Error = Class.new(StandardError)
     AuthenticationError = Class.new(Error)
 
-    attr_reader :endpoint_url
-
     def initialize(subdomain, username, password, token)
       @username, @password, @token, @subdomain = username, password, token, subdomain
-      @endpoint_url ||= eval('"' + REST_API_URL + '"')
+      @endpoint_url = "https://#{@subdomain}.insidesales.com/do=noauth/rest/service"
     end
 
     # This is a special type of request that is not handled via
@@ -35,7 +31,7 @@ module InsideSales
     # Unfortunately the InsideSales API does not always return valid
     # JSON, so we have to work around it a bit.
     def request(operation, parameters)
-      response = RestClient.post(endpoint_url, {
+      response = RestClient.post(@endpoint_url, {
                                    :operation => operation,
                                    :parameters => parameters
                                  }.to_json,
